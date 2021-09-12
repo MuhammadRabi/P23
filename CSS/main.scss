@@ -1,0 +1,75 @@
+/* import major sass files */
+
+@import "sass/variables";
+@import "sass/mixins";
+@import "sass/breakpoints";
+@import "sass/buttons";
+
+/* Start Global rules */
+
+/* reusable components */
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 1px solid $mainColor;
+  background-color: #fff;
+  padding: 7px 20px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.margin-50 {
+  margin-top: 50px;
+}
+
+.margin-100 {
+  margin-top: 100px;
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+/* end global rules */
+
+/* ===== Manual Responsive ===== */
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /* small */
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+  /* medium */
+  @media (min-width: 992px) {
+    width: 970px;
+  }
+  /* large */
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+}
+/* ===== Manual Responsive ===== */

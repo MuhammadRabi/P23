@@ -1,0 +1,81 @@
+/* import major sass files */
+/* idenity color */
+/** experimental grid mixins **/
+/** experimental grid mixins **/
+/** experimenta responsive breakpoints **/
+/* Start Global rules */
+/* reusable components */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 1px solid #19c8fa;
+  background-color: #fff;
+  padding: 7px 20px;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.margin-50 {
+  margin-top: 50px;
+}
+
+.margin-100 {
+  margin-top: 100px;
+}
+
+.img-fluid {
+  max-width: 100%;
+}
+
+/* end global rules */
+/* ===== Manual Responsive ===== */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  /* small */
+  /* medium */
+  /* large */
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* ===== Manual Responsive ===== */
+/*# sourceMappingURL=main.css.map */
