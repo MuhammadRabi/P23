@@ -109,6 +109,12 @@ header {
   z-index: 999;
 }
 
+@media (max-width: 767px) {
+  header {
+    padding: 40px 20px;
+  }
+}
+
 header .logo {
   position: relative;
   font-size: 24px;
@@ -269,6 +275,45 @@ body.dark .main .mask {
 .navigation li a:hover {
   background-color: var(--dark);
   color: var(--white);
+}
+
+.socials {
+  position: absolute;
+  z-index: 3;
+  bottom: 50px;
+  right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 767px) {
+  .socials {
+    right: 20px;
+  }
+}
+
+.socials i {
+  color: var(--dark);
+  font-size: 24px;
+  padding: 10px;
+  -webkit-transition: 0.1 s ease-in-out;
+  transition: 0.1 s ease-in-out;
+}
+
+.socials i:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /* navigation */

@@ -98,6 +98,9 @@ header {
   width: 100%;
   padding: 40px 100px;
   z-index: 999;
+  @include mobile {
+    padding: 40px 20px;
+  }
   .logo {
     position: relative;
     font-size: 24px;
@@ -215,6 +218,29 @@ body.dark .main .mask {
     &:hover {
       background-color: var(--dark);
       color: var(--white);
+    }
+  }
+}
+
+.socials {
+  position: absolute;
+  z-index: 3;
+  bottom: 50px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include mobile {
+    right: 20px;
+  }
+  i {
+    color: var(--dark);
+    font-size: 24px;
+    padding: 10px;
+    transition: 0.1 s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }

@@ -1,3 +1,5 @@
+// dark mode switch and nav menu
+
 let menuToggle = document.querySelector(".menu-toggle");
 let navMenu = document.querySelector(".navigation");
 let darkSwitch = document.querySelector(".day-light");
