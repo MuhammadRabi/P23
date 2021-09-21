@@ -74,19 +74,20 @@ a {
 }
 /* ===== Manual Responsive ===== */
 
+/* dark mode formatting */
 :root {
   --dark: #333;
   --white: #fff;
 }
 
 .dark {
-  --dark: #333;
-  --white: #fff;
+  --dark: #fff;
+  --white: #333;
 }
+/* dark mode formatting */
 
-body.dark {
-  background-color: var(--dark);
-  color: var(--white);
+body {
+  font-family: "Poppins", sans-serif;
   transition: 0.5s ease-in-out;
 }
 
@@ -96,11 +97,32 @@ header {
   justify-content: space-between;
   width: 100%;
   padding: 40px 100px;
-  height: 100vh;
   z-index: 999;
+  .logo {
+    position: relative;
+    font-size: 24px;
+    color: var(--dark);
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
   .btns-box {
+    position: relative;
     display: flex;
     justify-content: space-around;
+    .btns {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      i {
+        color: var(--dark);
+        font-size: 24px;
+      }
+    }
     .day-light i:nth-child(1) {
       display: block;
     }
@@ -133,7 +155,7 @@ header {
 
 /* video */
 .main {
-  position: absolute;
+  position: relative;
   min-height: 100vh;
   width: 100%;
 
@@ -143,6 +165,7 @@ header {
     height: 100%;
     top: 0;
     left: 0;
+    object-fit: cover;
   }
   .mask {
     position: absolute;
@@ -152,13 +175,13 @@ header {
     left: 0;
     user-select: none;
     mix-blend-mode: screen;
-  }
-  .dark .mask {
-    filter: invert(1);
-    mix-blend-mode: multiply;
+    z-index: 2;
   }
 }
-
+body.dark .main .mask {
+  filter: invert(1);
+  mix-blend-mode: multiply;
+}
 /* video */
 
 /* navigation */
@@ -166,15 +189,15 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  left: -100%;
   top: 0;
+  left: -100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #fff;
+  background: var(--white);
   transition: 0.5s ease-in-out;
-  z-index: 99;
+  z-index: 4;
   &.active {
     left: 0;
   }
@@ -183,14 +206,15 @@ header {
     display: inline-flex;
     font-size: 25px;
     color: var(--dark);
-    margin: 5px 15px;
+    margin: 10px 15px;
     text-transform: capitalize;
     transition: 0.5s ease-in-out;
     border-radius: 30px;
-    padding: 5px 15px;
+    padding: 10px 25px;
+
     &:hover {
       background-color: var(--dark);
-      color: #fff;
+      color: var(--white);
     }
   }
 }
